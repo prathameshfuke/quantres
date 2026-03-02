@@ -1,4 +1,4 @@
-"""
+﻿"""
 FI-2010 Limit Order Book Research Pipeline.
 
 Provides modular code for standardizing, extracting features,
@@ -270,3 +270,4 @@ if __name__ == '__main__':
     plot_diagnostics(train_ds.features[:, 0].numpy(), train_ds.labels.numpy(), num_points=500, out_path=plot_path)
 
     print("Pipeline code executed successfully. Classes are modular and ready for the FI-2010 framework.")
+

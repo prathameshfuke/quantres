@@ -1,0 +1,117 @@
+# =============================================================================
+#  LOB Execution-Aware Loss Research Pipeline — .gitignore
+#  All outputs are reproducible via:  python reproduce_all.py
+# =============================================================================
+
+# ── Python bytecode & cache ───────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+wheels/
+sdist/
+develop-eggs/
+.eggs/
+lib/
+lib64/
+MANIFEST
+*.spec
+
+# ── Virtual environments ──────────────────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+.env
+.env.local
+.env.*.local
+quantres\.venv
+
+# ── Jupyter ───────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── PyTorch checkpoints  (large binary — regenerate via reproduce_all.py) ─
+checkpoints/*.pt
+checkpoints/*.pth
+checkpoints/*.ckpt
+checkpoints/*.bin
+checkpoints/*.safetensors
+
+# ── Dataset files  (auto-downloaded on first run, no manual steps needed) ─
+data/*.txt
+data/*.csv
+data/*.zip
+data/*.npy
+data/*.npz
+data/*.hdf5
+data/*.h5
+data/*.parquet
+data/*.feather
+
+# ── Generated artefacts  (reproduction outputs) ───────────────────────────
+images/
+figures/
+logs/
+tables/
+
+# ── Scratch / session artefacts ───────────────────────────────────────────
+module1_out.txt
+reproduce_all.log
+resume_from_ablation.py
+*.log
+*.tmp
+*.temp
+*.bak
+*~
+
+# ── Testing & coverage ────────────────────────────────────────────────────
+.pytest_cache/
+.cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+nosetests.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# ── Profiling ─────────────────────────────────────────────────────────────
+*.prof
+*.lprof
+
+# ── IDE & editor ──────────────────────────────────────────────────────────
+# Keep .vscode/extensions.json (shared extension recommendations) but
+# ignore personal/machine-specific settings.
+.vscode/settings.json
+.vscode/launch.json
+.vscode/tasks.json
+.vscode/*.code-snippets
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.suo
+*.swp
+*.swo
+*.sw?
+
+# ── OS artefacts ──────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
